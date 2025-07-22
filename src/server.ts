@@ -25,7 +25,8 @@ const server = new ApolloServer({
 const startApolloServer = async() =>{
 
   app.use(cors({
-    origin:'https://ac-technology.netlify.app'
+    origin:'https://ac-technology.netlify.app',
+    credentials: true
   }))
 
   await server.start();
